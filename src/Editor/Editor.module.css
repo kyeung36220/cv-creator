@@ -1,0 +1,123 @@
+:root {
+    font-family: "Varela Round";
+}
+
+.editor {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.actionsRow {
+    display: flex;
+    gap: 20px;
+    font-size: 2em;
+    padding: 15px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.actionsRow .row {
+    background-color: white;
+    box-shadow: 2px 2px 2px black;
+    display: flex;
+    padding: 15px;
+    border-radius: 5px;
+    color: black;
+}
+
+.actionsRow .row:hover {
+    background-color: rgb(201, 201, 201);
+    cursor: pointer;
+}
+
+.actionsRow .remove {
+    color: #fd3b3b;
+}
+
+.actionsRow .remove:hover {
+    background-color: rgb(201, 201, 201);
+}
+
+.actionsRow .trash {
+    filter: brightness(0) saturate(100%) invert(47%) sepia(63%) saturate(2894%) hue-rotate(332deg) brightness(93%) contrast(115%);    
+    height: 23px;
+    margin-right: 5px;
+}
+
+.actionsRow .downloadIcon {
+    height: 25px;
+    margin-right: 5px;
+}
+
+.personal {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+    padding: 20px 50px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+    border-left: 20px solid blue
+}
+
+.personal header {
+    font-size: 2em;
+}
+
+.personal .inputs {
+    display: flex;
+    font-size: 1.5em;
+}
+
+.personal .inputs .leftSide {
+    margin-right: auto;
+}
+
+.personal .inputs .rightSide {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.personal input {
+    background-color: rgb(201, 201, 201);
+    border: none;
+    border-radius: 5px;
+    height: 1.5em;
+    width: 100%;
+    text-align: center;
+    font-family: "Varela Round";
+    font-size: 0.8em;
+}
+
+.personal .inputGap {
+    margin-bottom: 20px;
+}
+
+.infoBars {
+    display: flex;
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+    border-left: 20px solid blue;
+}
+
+.infoBars .headerText {
+    font-size: 2em;
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+.infoBars img {
+    height: 33px;
+    vertical-align: bottom;
+}
+
+.infoBars .caret {
+    height: 40px;
+}
+
+.infoBars .caret {
+    cursor: pointer;
+}
