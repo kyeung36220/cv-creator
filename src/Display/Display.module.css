@@ -1,6 +1,82 @@
 .display {
     background-color: white;
-    height: 70.67vw;
-    width: 50vw;
+    height: 63.61vw;
+    width: 45vw;
     margin-left: auto;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 50px 50px;
+    font-size: 1.2vw;
+}
+
+.contactSection {
+    text-align: center;
+    font-size: 1.2vw;
+}
+
+.contactSection .name {
+    font-size: 2vw;
+    font-weight: bold;
+    margin-bottom: 0.3vh;
+}
+
+header {
+    font-weight: bold;
+}
+
+.line {
+    margin-top: 2px;
+    height: 2px;
+    background-color: black;
+    border-radius: 1px;
+    margin-bottom: 1vw;
+}
+
+.schoolSection {
+    margin-top: 1vw;
+}
+
+.schoolSection .topRow {
+    display: flex;
+}
+
+.schoolSection .schoolName{
+    font-weight: bold;
+    margin-right: auto;
+    margin-bottom: 0.2vh;
+}
+
+.schoolSection .degree {
+    font-style: italic;
+    margin-bottom: 1vh;
+}
+
+.experienceSection {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+.experienceSection .position {
+    display: flex;
+}
+
+.experienceSection .positionName {
+    font-weight: bold;
+    margin-right: auto;
+}
+
+.experienceSection .companyName {
+    font-style: italic;
+}
+
+.experienceSection ul {
+    margin-bottom: 2vh;
+}
+
+.skillsSection .skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+ul {
+    margin: 0.5vw 0 0.5vw 0;
 }

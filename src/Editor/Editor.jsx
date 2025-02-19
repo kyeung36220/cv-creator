@@ -5,14 +5,21 @@ import Experience from "./Experience.jsx"
 import Skills from "./Skills.jsx"
 import styles from "./Editor.module.css"
 
-function Editor({ setName, name }) {
+function Editor({ setPersonalInfo, personalInfo,
+                  setSchoolInfo, schoolInfo,
+                  setExperienceInfo, experienceInfo,
+                  setSkillsInfo, skillsInfo }) { 
     return(
         <div className={styles.editor}>
-            <ActionsRow />
-            <Personal setName={setName} name={name}/>
-            <Education />
-            <Experience />
-            <Skills />
+            <ActionsRow setPersonalInfo={setPersonalInfo} 
+                        setSchoolInfo={setSchoolInfo} 
+                        setExperienceInfo={setExperienceInfo}
+                        setSkillsInfo={setSkillsInfo}/>
+
+            <Personal setPersonalInfo={setPersonalInfo} personalInfo={personalInfo}/>
+            <Education setSchoolInfo={setSchoolInfo} schoolInfo={schoolInfo}/>
+            <Experience setExperienceInfo={setExperienceInfo} experienceInfo={experienceInfo}/>
+            <Skills setSkillsInfo={setSkillsInfo} skillsInfo={skillsInfo}/>
         </div>
     )
 }

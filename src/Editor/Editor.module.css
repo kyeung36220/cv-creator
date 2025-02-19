@@ -5,14 +5,14 @@
 .editor {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 2vh;
 }
 
 .actionsRow {
     display: flex;
-    gap: 20px;
-    font-size: 2em;
-    padding: 15px;
+    gap: 1.5vw;
+    font-size: 2vw;
+    padding: 1vw;
     border-radius: 10px;
     justify-content: center;
 }
@@ -21,53 +21,98 @@
     background-color: white;
     box-shadow: 2px 2px 2px black;
     display: flex;
-    padding: 15px;
+    padding: 0.8vw;
     border-radius: 5px;
     color: black;
 }
 
 .actionsRow .row:hover {
-    background-color: rgb(201, 201, 201);
     cursor: pointer;
 }
 
 .actionsRow .remove {
-    color: #fd3b3b;
+    color: black;
 }
 
 .actionsRow .remove:hover {
-    background-color: rgb(201, 201, 201);
+    animation: removeHover 0.15s linear;
+    animation-fill-mode: forwards;
 }
 
-.actionsRow .trash {
-    filter: brightness(0) saturate(100%) invert(47%) sepia(63%) saturate(2894%) hue-rotate(332deg) brightness(93%) contrast(115%);    
-    height: 23px;
-    margin-right: 5px;
+@keyframes removeHover {
+    from {background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);}
+    to   {background-color: rgb(255, 0, 0); color: rgb(255, 255, 255);}
+}
+
+.actionsRow .remove .trash {
+    width: 1.3vw;
+    margin-right: 0.3vw;
+}
+
+.actionsRow .remove:hover .trash {
+    animation: removeHoverIcon 0.15s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes removeHoverIcon {
+    from {filter: brightness(0) saturate(100%) invert(0%) sepia(1%) saturate(7494%) hue-rotate(329deg) brightness(107%) contrast(97%);}
+    to   {filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(235deg) brightness(109%) contrast(101%);}
+}
+
+.actionsRow .example:hover {
+    animation: exampleHover 0.15s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes exampleHover {
+    from {color: black; background-color: white;}
+    to {color: white; background-color: rgb(15, 0, 180);}
+}
+
+.actionsRow .download:hover {
+    animation: downloadHover 0.15s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes downloadHover {
+    from {color: black; background-color: white;}
+    to {color: white; background-color: rgb(27, 180, 0);}
 }
 
 .actionsRow .downloadIcon {
-    height: 25px;
-    margin-right: 5px;
+    height: 1.5vw;
+    margin-right: 0.3vw;
+}
+
+.actionsRow .download:hover .downloadIcon {
+    animation: downloadIconHover 0.15s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes downloadIconHover {
+    from {filter: brightness(0) saturate(100%) invert(0%) sepia(1%) saturate(7494%) hue-rotate(329deg) brightness(107%) contrast(97%);}
+    to   {filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(235deg) brightness(109%) contrast(101%);}
 }
 
 .personal {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.5vw;
     background-color: white;
-    padding: 20px 50px;
+    padding: 1.5vw 2vw;
     border-radius: 10px;
     box-shadow: 2px 2px 2px black;
-    border-left: 20px solid blue
+    border-left: 20px solid blue;
+    font-size: 1vw;
 }
 
 .personal header {
-    font-size: 2em;
+    font-size: 2vw;
 }
 
 .personal .inputs {
     display: flex;
-    font-size: 1.5em;
+    font-size: 1.5vw;
 }
 
 .personal .inputs .leftSide {
@@ -83,11 +128,12 @@
     background-color: rgb(201, 201, 201);
     border: none;
     border-radius: 5px;
-    height: 1.5em;
+    height: 1.3em;
     width: 100%;
     text-align: center;
     font-family: "Varela Round";
-    font-size: 0.8em;
+    font-size: 1.2vw;
+    padding: 0 0.6vw;
 }
 
 .personal .inputGap {
@@ -97,27 +143,56 @@
 .infoBars {
     display: flex;
     background-color: white;
-    padding: 20px 30px;
+    padding: 1.1vw 2vw;
     border-radius: 10px;
     box-shadow: 2px 2px 2px black;
-    border-left: 20px solid blue;
+    border-left: 1vw solid blue;
+    cursor: pointer;
 }
 
 .infoBars .headerText {
-    font-size: 2em;
+    font-size: 1.8vw;
     margin-right: auto;
-    margin-left: 10px;
+    margin-left: 1vw;
 }
 
 .infoBars img {
-    height: 33px;
+    width: 2.3vw;
     vertical-align: bottom;
 }
 
 .infoBars .caret {
-    height: 40px;
+    width: 2.6vw;
 }
 
-.infoBars .caret {
+.showMore {
+    background-color: white;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    border-radius: 10px;
+    padding: 1.1vw 2vw;
+    font-size: 1.2vw;
+    display: flex;
+}
+
+.showMore .iconList {
+    display: flex;
+    gap: 0.5vw;
+}
+
+.showMore .schoolName {
+    margin-right: auto;
+}
+
+.showMore .icon {
+    height: 3vh;
     cursor: pointer;
+}
+
+.showMore .editIcon:hover {
+    filter: brightness(0) saturate(100%) invert(12%) sepia(69%) saturate(6702%) hue-rotate(233deg) brightness(112%) contrast(120%);
+}
+
+.showMore .trashIcon:hover {
+    filter: brightness(0) saturate(100%) invert(16%) sepia(83%) saturate(6188%) hue-rotate(357deg) brightness(104%) contrast(115%);
 }
