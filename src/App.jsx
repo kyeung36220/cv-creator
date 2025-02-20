@@ -1,4 +1,4 @@
-import Editor from "./Editor/Editor.jsx"
+import { Editor } from "./Editor/Editor.jsx"
 import { Display } from "./Display/Display.jsx"
 import { useState } from "react"
 import { defaultPersonalInfo, defaultSchoolInfo, defaultExperienceInfo, defaultSkillsInfo } from "./defaultInfo.jsx"

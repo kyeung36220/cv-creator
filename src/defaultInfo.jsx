@@ -17,7 +17,7 @@ export const defaultSchoolInfo = [
     id: 1,
     schoolName: "Stone University",
     degree: "Bachelors in Battling",
-    endDate: "May 2024",
+    endDate: 'May 2025',
     hidden: false,
   }
 ]
@@ -27,7 +27,7 @@ export const defaultExperienceInfo = [
     id: 0,
     companyName: "Pokemon League",
     position: "Regional Champion",
-    startDate: "Sep. 2024",
+    startDate: 'September 2024',
     endDate: "Present",
     location: "Ever Grande City, Hoenn",
     description: [
@@ -42,8 +42,8 @@ export const defaultExperienceInfo = [
     id: 1,
     companyName: "Birch Laboratory",
     position: "Catching Intern",
-    startDate: "Mar. 2021",
-    endDate: "Aug. 2023",
+    startDate: 'March 2021',
+    endDate: 'September 2023',
     location: "Littleroot Town, Hoenn",
     description: [
       "Assisted Professor Birch in Pokemon field research, focusing on capturing and documenting wild Pokémon for Pokédex completion.",

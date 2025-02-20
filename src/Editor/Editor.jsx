@@ -5,7 +5,7 @@ import Experience from "./Experience.jsx"
 import Skills from "./Skills.jsx"
 import styles from "./Editor.module.css"
 
-function Editor({ setPersonalInfo, personalInfo,
+export function Editor({ setPersonalInfo, personalInfo,
                   setSchoolInfo, schoolInfo,
                   setExperienceInfo, experienceInfo,
                   setSkillsInfo, skillsInfo }) { 
@@ -23,5 +23,3 @@ function Editor({ setPersonalInfo, personalInfo,
         </div>
     )
 }
-
-export default Editor

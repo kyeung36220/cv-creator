@@ -168,11 +168,14 @@
 .showMore {
     background-color: white;
     margin-left: 1vw;
-    margin-top: 1vh;
+    margin-bottom: 1vh;
     border-radius: 10px;
     padding: 1.1vw 2vw;
     font-size: 1.2vw;
     display: flex;
+    border-left: 1vw solid rgb(0, 204, 255);
+    justify-content: center;
+    align-items: center;
 }
 
 .showMore .iconList {
@@ -195,4 +198,82 @@
 
 .showMore .trashIcon:hover {
     filter: brightness(0) saturate(100%) invert(16%) sepia(83%) saturate(6188%) hue-rotate(357deg) brightness(104%) contrast(115%);
+}
+
+.editScreen {
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1vh;
+    border-radius: 10px;
+    padding: 1.1vw 2vw;
+    font-size: 1.2vw;
+    border-left: 1vw solid rgb(0, 204, 255);
+    text-align: center;
+    width: 70%;
+}
+
+.editScreen input {
+    background-color: rgb(201, 201, 201);
+    border: none;
+    border-radius: 5px;
+    height: 1.3em;
+    width: 50%;
+    text-align: center;
+    font-family: "Varela Round";
+    font-size: 1vw;
+    margin-bottom: 1vh;
+}
+
+.editScreen .checkbox {
+    width: fit-content;
+}
+
+.doneButton {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    border: 0.2vw solid black;
+    width: fit-content;
+    padding: 1vh 1vw;
+    display: flex;
+    margin: 0px auto;
+    cursor: pointer;
+}
+
+.doneButton:hover {
+    animation: doneButtonHover 0.15s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes doneButtonHover {
+    from {background-color: white; color: black}
+    to {background-color: green; color: white}
+}
+
+.presentCheckBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1vh;
+}
+
+.addMore {
+    justify-content: center;
+    align-items: center;
+    gap: 0.5vw;
+    cursor: pointer;
+    border-left: none;
+}
+
+.addIcon {
+    height: 1.4vh;
+}
+
+.eyeShut {
+    filter: brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(7180%) hue-rotate(360deg) brightness(106%) contrast(113%);
+}
+
+.eyeIcon {
+    filter: brightness(0) saturate(100%) invert(22%) sepia(64%) saturate(1671%) hue-rotate(103deg) brightness(96%) contrast(107%);
 }

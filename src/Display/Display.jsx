@@ -37,8 +37,8 @@ export function Display( {personalInfo, schoolInfo, experienceInfo, skillsInfo} 
                                     <div className={styles.dates}>{experience.startDate} to {experience.endDate}</div></div>
                                 <div className={styles.companyName}>{experience.companyName}</div>
                                 <div className={styles.location}>{experience.location}</div>
-                                <ul className={styles.description}>{experience.description.map((bullet) => 
-                                    <li>{bullet}</li>
+                                <ul className={styles.description}>{experience.description.map((bullet, index) => 
+                                    <li key={index}>{bullet}</li>
                                 )}</ul> 
                             </>)
                         }
