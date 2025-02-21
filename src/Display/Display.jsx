@@ -3,14 +3,14 @@ import styles from "./Display.module.css"
 
 export function Display( {personalInfo, schoolInfo, experienceInfo, skillsInfo} ) {
     return(
-        <div className={styles.display}>
+        <div className={styles.display} id="display">
             <div className={styles.contactSection}>
                 <div className={styles.name}>{personalInfo.name}</div>
                 <div className={styles.address}>{personalInfo.address}</div>
                 <div className={styles.number}>{personalInfo.number}</div>
                 <div className={styles.email}>{personalInfo.email}</div>
             </div>
-            <div className={styles.schoolSection}>
+            {schoolInfo.length > 0 && <div className={styles.schoolSection}>
                 <header><div>Education</div></header>
                 <div className={styles.line}></div>
                 <div className={styles.school}>{schoolInfo.map((school) => {
@@ -25,8 +25,8 @@ export function Display( {personalInfo, schoolInfo, experienceInfo, skillsInfo} 
                     }
                 }
                 )}</div>
-            </div>
-            <div className={styles.experienceSection}>
+            </div>}
+            {experienceInfo.length > 0 && <div className={styles.experienceSection}>
                 <header><div>Experience</div></header>
                 <div className={styles.line}></div>
                 <div className={styles.experience}>{experienceInfo.map((experience) => {
@@ -44,16 +44,20 @@ export function Display( {personalInfo, schoolInfo, experienceInfo, skillsInfo} 
                         }
                 }
                     )}</div>
-            </div>
-            <div className={styles.skillsSection}>
+            </div>}
+            {skillsInfo.length > 0 && <div className={styles.skillsSection}>
                 <header><div>Skills</div></header>
                 <div className={styles.line}></div>
                 <ul className={styles.skills}>{skillsInfo.map((skill) => 
-                <>
-                    <li key={skill.id} className={styles.skill}>{skill.name}</li>
-                </>
+                {if (skill.hidden === false) {
+                    return (
+                        <>
+                            <li key={skill.id} className={styles.skill}>{skill.name}</li>
+                        </>
+                    )
+                }}
                 )}</ul>
-            </div>
+            </div>}
         </div>
     )
 }

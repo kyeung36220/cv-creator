@@ -24,7 +24,7 @@ function Education({ setSchoolInfo, schoolInfo }) {
                     <img src={caret} className={styles.caret}/>
                 </div>
             </div>
-            {isShowEducation && (<div>
+            {isShowEducation && schoolInfo.length > 0 && (<div>
                 {schoolInfo.map((school) => 
                     <div key={school.id} className={styles.showMore}>
                         <div className={styles.schoolName}>{school.schoolName}</div>
@@ -44,9 +44,9 @@ function Education({ setSchoolInfo, schoolInfo }) {
                         </div>
                     </div>)
                 }
-                <div className={[styles.showMore, styles.addMore].join(' ')}>
+                <div className={[styles.showMore, styles.addMore].join(' ')} onClick={handleAddSchoolClick}>
                     <a><img src={plus} className={[styles.addIcon].join(' ')}/></a>
-                    <div className={styles.addMoreText} onClick={handleAddSchoolClick}>
+                    <div className={styles.addMoreText}>
                         Add School
                     </div>
                 </div>
@@ -138,20 +138,16 @@ function Education({ setSchoolInfo, schoolInfo }) {
     }
 
     function handlePresentCheck(e) {
+        const schoolId = showSchoolId
+        const schoolInfoCopy = schoolInfo.slice()
+    
         if (e.target.checked) {
-            const schoolId = showSchoolId
-            const schoolInfoCopy = schoolInfo.slice()
             schoolInfoCopy[schoolId].endDate = "Present"
-            setSchoolInfo(schoolInfoCopy)
         }
         else {
-            const schoolId = showSchoolId
-            const schoolInfoCopy = schoolInfo.slice()
-        
             schoolInfoCopy[schoolId].endDate = ""
-
-            setSchoolInfo(schoolInfoCopy)
         }
+        setSchoolInfo(schoolInfoCopy)
     }
     
     function handleDoneClick() {

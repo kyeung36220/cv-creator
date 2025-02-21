@@ -55,10 +55,10 @@ export const defaultExperienceInfo = [
   }]
 
 export const defaultSkillsInfo = [
-    {id: 0, name: "Pokemon Training"},
-    {id: 1, name: "Battle Strategy"},
-    {id: 3, name: "Pokedex Research"},
-    {id: 4, name: "Leadership"},
-    {id: 5, name: "Crisis Management"},
-    {id: 6, name: "Legendary Pokemon Handling"},
+    {id: 0, name: "Pokemon Training", hidden: false},
+    {id: 1, name: "Battle Strategy", hidden: false},
+    {id: 3, name: "Pokedex Research", hidden: true},
+    {id: 4, name: "Leadership", hidden: false},
+    {id: 5, name: "Crisis Management", hidden: false},
+    {id: 6, name: "Legendary Pokemon Handling", hidden: false},
 ]

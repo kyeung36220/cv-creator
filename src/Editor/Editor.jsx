@@ -6,15 +6,15 @@ import Skills from "./Skills.jsx"
 import styles from "./Editor.module.css"
 
 export function Editor({ setPersonalInfo, personalInfo,
-                  setSchoolInfo, schoolInfo,
-                  setExperienceInfo, experienceInfo,
-                  setSkillsInfo, skillsInfo }) { 
+                         setSchoolInfo, schoolInfo,
+                         setExperienceInfo, experienceInfo,
+                         setSkillsInfo, skillsInfo }) { 
     return(
         <div className={styles.editor}>
-            <ActionsRow setPersonalInfo={setPersonalInfo} 
+            <ActionsRow setPersonalInfo={setPersonalInfo}
                         setSchoolInfo={setSchoolInfo} 
-                        setExperienceInfo={setExperienceInfo}
-                        setSkillsInfo={setSkillsInfo}/>
+                        setExperienceInfo={setExperienceInfo} 
+                        setSkillsInfo={setSkillsInfo} />
 
             <Personal setPersonalInfo={setPersonalInfo} personalInfo={personalInfo}/>
             <Education setSchoolInfo={setSchoolInfo} schoolInfo={schoolInfo}/>

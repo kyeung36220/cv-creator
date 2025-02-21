@@ -178,16 +178,13 @@
     align-items: center;
 }
 
-.showMore .iconList {
+.iconList {
     display: flex;
     gap: 0.5vw;
+    margin-left: auto;
 }
 
-.showMore .schoolName {
-    margin-right: auto;
-}
-
-.showMore .icon {
+.icon {
     height: 3vh;
     cursor: pointer;
 }
@@ -196,7 +193,7 @@
     filter: brightness(0) saturate(100%) invert(12%) sepia(69%) saturate(6702%) hue-rotate(233deg) brightness(112%) contrast(120%);
 }
 
-.showMore .trashIcon:hover {
+.trashIcon:hover {
     filter: brightness(0) saturate(100%) invert(16%) sepia(83%) saturate(6188%) hue-rotate(357deg) brightness(104%) contrast(115%);
 }
 
@@ -276,4 +273,83 @@
 
 .eyeIcon {
     filter: brightness(0) saturate(100%) invert(22%) sepia(64%) saturate(1671%) hue-rotate(103deg) brightness(96%) contrast(107%);
+}
+
+.trashBullet {
+    height: 2vh;
+    cursor: pointer;
+    margin-left: 1vw;
+}
+
+.addDescBullet {
+    display: flex;
+    border: 0.2vw solid black;
+    width: fit-content;
+    padding: 1vh 1vw;
+    border-radius: 10px;
+    margin: 1vh auto 1vh auto;
+    cursor: pointer;
+    font-size: 1vw;
+}
+
+.addDescBullet img {
+    margin-right: 0.5vw;
+    height: 0.7vw;
+}
+
+.descriptionBullet input {
+    width: 80%;
+    height: 2vh;
+    resize: both;
+    padding: 1vh 1vw;
+}
+
+.skillInput {
+    background-color: rgb(201, 201, 201);
+    border: none;
+    border-radius: 5px;
+    height: 1.3em;
+    width: 50%;
+    text-align: center;
+    font-family: "Varela Round";
+    font-size: 1vw;
+    margin-bottom: 1vh;
+    padding: 1vh 1vw;
+}
+
+.skillsEditScreen {
+    background-color: white;
+    margin: 0 auto 1vh auto;
+    border-radius: 10px;
+    padding: 1.1vw 2vw;
+    font-size: 1.2vw;
+    display: flex;
+    flex-direction: column;
+    border-left: 1vw solid rgb(0, 204, 255);
+    width: 70%;
+}
+
+.skillsEditScreen .skillsHeader {
+    margin-bottom: 1vh;
+}
+
+.skillRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skillRow .iconList {
+    margin-left: 2vw;
+    padding-bottom: 0.5vw;
+}
+
+.skillsEditScreen .addMore {
+    border: 0.2vw solid black;
+    width: fit-content;
+    height: fit-content;
+    padding: 1vh 1vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1vh;
 }
