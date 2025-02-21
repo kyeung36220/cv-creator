@@ -6,3 +6,9 @@ body {
     display: flex;
     padding: 3vh 2vw;
 }
+
+@media (max-width: 1106px) {
+    .mainScreen {
+        flex-direction: column;
+    }
+}

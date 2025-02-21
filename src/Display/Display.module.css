@@ -27,7 +27,7 @@ header {
     margin-top: 2px;
     height: 2px;
     background-color: black;
-    border-radius: 1px;
+    border-radius: 2px;
     margin-bottom: 1vw;
 }
 
@@ -79,4 +79,25 @@ header {
 
 ul {
     margin: 0.5vw 0 0.5vw 0;
+}
+
+@media (max-width: 1106px) {
+    .display {
+        height: 113.08vw;
+        width: 80vw;
+        margin-right: auto;
+        margin-top: 2vh;
+        padding: 10vw 6vw;
+        font-size: 2vw;
+    }
+
+    .contactSection .name {
+        font-size: 3.5vw;
+    }
+
+    .contactSection {
+        text-align: center;
+        font-size: 2vw;
+    }
+    
 }

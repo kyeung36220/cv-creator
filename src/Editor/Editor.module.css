@@ -46,6 +46,7 @@
 
 .actionsRow .remove .trash {
     width: 1.3vw;
+    height: fit-content;
     margin-right: 0.3vw;
 }
 
@@ -103,7 +104,6 @@
     border-radius: 10px;
     box-shadow: 2px 2px 2px black;
     border-left: 20px solid blue;
-    font-size: 1vw;
 }
 
 .personal header {
@@ -171,7 +171,7 @@
     margin-bottom: 1vh;
     border-radius: 10px;
     padding: 1.1vw 2vw;
-    font-size: 1.2vw;
+    font-size: 1.5vw;
     display: flex;
     border-left: 1vw solid rgb(0, 204, 255);
     justify-content: center;
@@ -204,7 +204,7 @@
     margin-bottom: 1vh;
     border-radius: 10px;
     padding: 1.1vw 2vw;
-    font-size: 1.2vw;
+    font-size: 1.5vw;
     border-left: 1vw solid rgb(0, 204, 255);
     text-align: center;
     width: 70%;
@@ -214,11 +214,10 @@
     background-color: rgb(201, 201, 201);
     border: none;
     border-radius: 5px;
-    height: 1.3em;
     width: 50%;
     text-align: center;
     font-family: "Varela Round";
-    font-size: 1vw;
+    font-size: 1.3vw;
     margin-bottom: 1vh;
 }
 
@@ -264,7 +263,7 @@
 }
 
 .addIcon {
-    height: 1.4vh;
+    height: 1vw;
 }
 
 .eyeShut {
@@ -374,4 +373,129 @@
 @keyframes expandAnimation {
     from {opacity:0; translate: 0 -1vh}
     to {opacity:1; translate: 0 0vh}
+}
+
+@media (max-width: 1106px) {
+    .actionsRow {
+        font-size: 4.5vw;
+        align-items: center;
+    }
+
+    .actionsRow .row {
+        padding: 1vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .actionsRow .remove .trash {
+        width: 3vw;
+    }
+
+    .actionsRow .downloadIcon {
+        height: 3.2vw;
+    }
+
+    .personal {
+        gap: 3vw;
+        padding: 5vw 7vw;
+        border-left: 2vw solid blue;
+    }
+
+    .personal header {
+        font-size: 4vw;
+    }
+
+    .personal .inputs {
+        font-size: 3.5vw;
+    }
+
+    .personal input {
+        border-radius: 10px;
+        font-size: 3vw;
+        padding: 0 1vw;
+        width: 90%;
+    }
+
+    .infoBars {
+        padding: 2.2vw 4vw;
+        border-left: 2vw solid blue;
+    }
+
+    .infoBars .headerText {
+        font-size: 4vw;
+    }
+
+    .infoBars img {
+        width: 4vw;
+    }
+
+    .infoBars .caret {
+        width: 4.5vw;
+    }
+
+    .showMore {
+        padding: 2.2vw 4vw;
+        font-size: 4vw;
+        border-left: 2vw solid rgb(0, 204, 255);
+    }
+
+    .iconList {
+        gap: 2vw;
+    }
+
+    .icon {
+        height: 6vw;
+    }
+
+    .editScreen {
+        padding: 2.2vw 4vw;
+        font-size: 4vw;
+        border-left: 2vw solid rgb(0, 204, 255);
+    }
+
+    .editScreen input {
+        width: 50%;
+        text-align: center;
+        font-family: "Varela Round";
+        font-size: 3vw;
+        margin-bottom: 1vh;
+    }
+
+    input[type=checkbox] {
+            -ms-transform: scale(1.5); 
+            -moz-transform: scale(1.5); 
+            -webkit-transform: scale(1.5); 
+            -o-transform: scale(1.5); 
+            transform: scale(1.5);
+    }
+
+    .doneButton {
+        border: 0.7vw solid black;
+        padding: 1vh 2vw;
+        margin: 1vw auto;
+    }
+
+    .addIcon {
+        height: 2vw;
+    }
+
+    .addDescBullet {
+        font-size: 3vw;
+    }
+
+    .addDescBullet img{
+        height: 2vw;
+    }
+
+    .skillInput {
+        width: 50%;
+        font-size: 3vw;
+        padding: 1vh 1vw;
+    }
+
+    .skillsEditScreen {
+        padding: 5vw 4vw;
+        font-size: 4vw;
+        border-left: 2vw solid rgb(0, 204, 255);
+    } 
 }
