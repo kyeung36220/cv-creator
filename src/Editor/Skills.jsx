@@ -20,10 +20,10 @@ function Skills({setSkillsInfo, skillsInfo}) {
                 <div className={styles.headerText}>Skills</div>
                 <img src={caret} className={styles.caret}></img>
             </div>
-            { isShowSkills && skillsInfo.length > 0 && (
-                <div className={styles.skillsEditScreen}>
+            { isShowSkills && (
+                <div className={[styles.skillsEditScreen, styles.expandAnimation].join(' ')}>
                     <div className={styles.skillsHeader}>Skills:</div>
-                    {skillsInfo.map((skill, index) =>
+                    {skillsInfo.length > 0 && skillsInfo.map((skill, index) =>
                         <div key={skill.id} className={styles.skillRow}>
                             <input value={skill.name}
                                    type="text"

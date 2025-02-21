@@ -8,6 +8,8 @@ import eyeCrossed from "../assets/eyeCrossed.svg"
 import trash from "../assets/trash.svg"
 import plus from "../assets/plus.svg"
 import { textDateToDate } from "./dateConvertor"
+import up from "../assets/up.svg"
+import down from "../assets/down.svg"
 
 function Education({ setSchoolInfo, schoolInfo }) {
 
@@ -24,11 +26,17 @@ function Education({ setSchoolInfo, schoolInfo }) {
                     <img src={caret} className={styles.caret}/>
                 </div>
             </div>
-            {isShowEducation && schoolInfo.length > 0 && (<div>
-                {schoolInfo.map((school) => 
+            {isShowEducation && (<div className={styles.expandAnimation}>
+                {schoolInfo.length > 0 && schoolInfo.map((school) => 
                     <div key={school.id} className={styles.showMore}>
                         <div className={styles.schoolName}>{school.schoolName}</div>
                         <div className={styles.iconList}>
+                            <img className={[styles.icon, styles.upIcon].join(' ')} 
+                                    src={up}
+                                    onClick={() => {handleUpClick(school)}}/>
+                            <img className={[styles.icon, styles.downIcon].join(' ')} 
+                                    src={down}
+                                    onClick={() => {handleDownClick(school)}}/>
                             <img className={[styles.icon, styles.editIcon].join(' ')} 
                                  src={edit}
                                  onClick={() => {setIsShowEducation(false)
@@ -91,6 +99,38 @@ function Education({ setSchoolInfo, schoolInfo }) {
             
         </>
     )
+
+    function handleUpClick(school) {
+        //setting limit to prevent underflow
+        if (school.id === 0) {
+            return
+        }
+    
+        const schoolId = school.id
+        const schoolInfoCopy = schoolInfo.slice()
+        const movingSchool = schoolInfoCopy.splice(schoolId, 1)
+        schoolInfoCopy.splice(schoolId - 1, 0, movingSchool[0])
+        for (let i = 0; i < schoolInfoCopy.length; i++) {
+            schoolInfoCopy[i].id = i
+        }
+        setSchoolInfo(schoolInfoCopy)
+    }
+
+    function handleDownClick(school) {
+        //setting limit to prevent overflow
+        if (school.id === school.length - 1) {
+            return
+        }
+    
+        const schoolId = school.id
+        const schoolInfoCopy = schoolInfo.slice()
+        const movingSchool = schoolInfoCopy.splice(schoolId, 1)
+        schoolInfoCopy.splice(schoolId + 1, 0, movingSchool[0])
+        for (let i = 0; i < schoolInfoCopy.length; i++) {
+            schoolInfoCopy[i].id = i
+        }
+        setSchoolInfo(schoolInfoCopy)
+    }
 
     function handleEyeClick(school) {
         const schoolId = school.id

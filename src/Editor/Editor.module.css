@@ -353,3 +353,25 @@
     margin-right: auto;
     margin-top: 1vh;
 }
+
+.downIcon {
+    margin-left: -0.5vw;
+}
+
+.upIcon:hover {
+    filter: brightness(0) saturate(100%) invert(22%) sepia(64%) saturate(1671%) hue-rotate(103deg) brightness(96%) contrast(107%);
+}
+
+.downIcon:hover {
+    filter: brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(7180%) hue-rotate(360deg) brightness(106%) contrast(113%);
+}
+
+.expandAnimation {
+    animation: expandAnimation 0.15s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes expandAnimation {
+    from {opacity:0; translate: 0 -1vh}
+    to {opacity:1; translate: 0 0vh}
+}

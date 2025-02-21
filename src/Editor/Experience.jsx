@@ -8,6 +8,8 @@ import eye from "../assets/eye.svg"
 import eyeCrossed from "../assets/eyeCrossed.svg"
 import trash from "../assets/trash.svg"
 import plus from "../assets/plus.svg"
+import up from "../assets/up.svg"
+import down from "../assets/down.svg"
 
 
 function Experience({setExperienceInfo, experienceInfo}) {
@@ -23,11 +25,17 @@ function Experience({setExperienceInfo, experienceInfo}) {
                 <div className={styles.headerText}>Experience</div>
                 <img src={caret} className={styles.caret}></img>
             </div>
-            {isShowExperiences && (<div>
+            {isShowExperiences && (<div className={styles.expandAnimation}>
                 {experienceInfo.map((experience) => 
                     <div key={experience.id} className={styles.showMore}>
                         <div className={styles.experienceName}>{experience.companyName}: {experience.position}</div>
                         <div className={styles.iconList}>
+                            <img className={[styles.icon, styles.upIcon].join(' ')} 
+                                 src={up}
+                                 onClick={() => {handleUpClick(experience)}}/>
+                            <img className={[styles.icon, styles.downIcon].join(' ')} 
+                                 src={down}
+                                 onClick={() => {handleDownClick(experience)}}/>
                             <img className={[styles.icon, styles.editIcon].join(' ')} 
                                     src={edit}
                                     onClick={() => {setIsShowExperiences(false)
@@ -126,6 +134,38 @@ function Experience({setExperienceInfo, experienceInfo}) {
             )}
         </>
     )
+
+    function handleUpClick(experience) {
+        //setting limit to prevent underflow
+        if (experience.id === 0) {
+            return
+        }
+    
+        const experienceId = experience.id
+        const experienceInfoCopy = experienceInfo.slice()
+        const movingExperience = experienceInfoCopy.splice(experienceId, 1)
+        experienceInfoCopy.splice(experienceId - 1, 0, movingExperience[0])
+        for (let i = 0; i < experienceInfoCopy.length; i++) {
+            experienceInfoCopy[i].id = i
+        }
+        setExperienceInfo(experienceInfoCopy)
+    }
+
+    function handleDownClick(experience) {
+        //setting limit to prevent overflow
+        if (experience.id === experience.length - 1) {
+            return
+        }
+    
+        const experienceId = experience.id
+        const experienceInfoCopy = experienceInfo.slice()
+        const movingExperience = experienceInfoCopy.splice(experienceId, 1)
+        experienceInfoCopy.splice(experienceId + 1, 0, movingExperience[0])
+        for (let i = 0; i < experienceInfoCopy.length; i++) {
+            experienceInfoCopy[i].id = i
+        }
+        setExperienceInfo(experienceInfoCopy)
+    }
 
     function handleEyeClick(experience) {
         const experienceId = experience.id
