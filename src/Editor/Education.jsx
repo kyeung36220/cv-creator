@@ -13,6 +13,7 @@ import down from "../assets/down.svg"
 
 function Education({ setSchoolInfo, schoolInfo }) {
 
+    // used for functions below html
     const [isShowEducation, setIsShowEducation] = useState(false)
     const [isShowSchool, setIsShowSchool] = useState(false)
     const [showSchoolId, setShowSchoolId] = useState(0)
@@ -191,6 +192,7 @@ function Education({ setSchoolInfo, schoolInfo }) {
     }
     
     function handleDoneClick() {
+        // when done, goes back to displaying all schools
         setIsShowSchool(false)
         setIsShowEducation(true)
     }

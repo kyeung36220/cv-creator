@@ -14,6 +14,7 @@ import down from "../assets/down.svg"
 
 function Experience({setExperienceInfo, experienceInfo}) {
 
+    // states used for functions below html
     const [isShowExperiences, setIsShowExperiences] = useState(false)
     const [isExpandExperience, setIsExpandExperience] = useState(false)
     const [expandedExperienceId, setExpandedExperienceId] = useState(0)
@@ -204,9 +205,10 @@ function Experience({setExperienceInfo, experienceInfo}) {
         const experienceId = expandedExperienceId
         const experienceInfoCopy = experienceInfo.slice()
         
+        //creating date object at start of month to prevent overflowing to next month (e.g. Feb. 31 does not exist)
         const dateObject = new Date(`${e.target.value}-1`)
         dateObject.setMonth(dateObject.getMonth())
-        const formatDate = new Intl.DateTimeFormat("en-US", {month: 'long', year:'numeric'})
+        const formatDate = new Intl.DateTimeFormat("en-US", {month: 'long', year:'numeric'}) //formating date to month year format (e.g. March 2024)
         experienceInfoCopy[experienceId].startDate = formatDate.format(dateObject)
 
         setExperienceInfo(experienceInfoCopy)
@@ -216,9 +218,10 @@ function Experience({setExperienceInfo, experienceInfo}) {
         const experienceId = expandedExperienceId
         const experienceInfoCopy = experienceInfo.slice()
         
+        //creating date object at start of month to prevent overflowing to next month (e.g. Feb. 31 does not exist)
         const dateObject = new Date(`${e.target.value}-1`)
         dateObject.setMonth(dateObject.getMonth())
-        const formatDate = new Intl.DateTimeFormat("en-US", {month: 'long', year:'numeric'})
+        const formatDate = new Intl.DateTimeFormat("en-US", {month: 'long', year:'numeric'}) //formating date to month year format (e.g. March 2024)
         experienceInfoCopy[experienceId].endDate = formatDate.format(dateObject)
 
         setExperienceInfo(experienceInfoCopy)

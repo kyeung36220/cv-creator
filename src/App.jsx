@@ -5,6 +5,7 @@ import { defaultPersonalInfo, defaultSchoolInfo, defaultExperienceInfo, defaultS
 
 function App() {
 
+  // dsitributes same states to both editor and display so both sides' information are synced
   const [personalInfo, setPersonalInfo] = useState(defaultPersonalInfo)
   const [schoolInfo, setSchoolInfo] = useState(defaultSchoolInfo)
   const [experienceInfo, setExperienceInfo] = useState(defaultExperienceInfo)

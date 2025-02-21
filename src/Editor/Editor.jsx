@@ -5,6 +5,8 @@ import Experience from "./Experience.jsx"
 import Skills from "./Skills.jsx"
 import styles from "./Editor.module.css"
 
+// main distributor for editor side of page
+
 export function Editor({ setPersonalInfo, personalInfo,
                          setSchoolInfo, schoolInfo,
                          setExperienceInfo, experienceInfo,

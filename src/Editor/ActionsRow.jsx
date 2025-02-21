@@ -5,10 +5,10 @@ import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
 import { defaultPersonalInfo, defaultSchoolInfo, defaultExperienceInfo, defaultSkillsInfo } from "../defaultInfo.jsx"
 
+// top row with clear, load default, and download buttons
 function ActionsRow({ setPersonalInfo, setSchoolInfo, setExperienceInfo, setSkillsInfo,}) {
 
     const DownloadPdfButton = () => {
-
         const handleDownloadPdf = async () => {
             const element = document.getElementById("display")
             const canvas = await html2canvas(element);

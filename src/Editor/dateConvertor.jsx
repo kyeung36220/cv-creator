@@ -1,3 +1,5 @@
+// used to convert date in text form (e.g. April 2024) to a format that the date input can fill (e.g. 2024-04)
+
 export function textDateToDate(textDate) {
     const months = [
         "January", "February", "March", "April", "May", "June",

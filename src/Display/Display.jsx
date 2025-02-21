@@ -1,6 +1,7 @@
 import styles from "./Display.module.css"
 
 
+// main display for showing user finished product
 export function Display( {personalInfo, schoolInfo, experienceInfo, skillsInfo} ) {
     return(
         <div className={styles.display} id="display">

@@ -3,38 +3,6 @@ import styles from "./Editor.module.css"
 
 function Personal({setPersonalInfo, personalInfo}) {
 
-    const handleNameChange = (e) => {
-        setPersonalInfo({name: e.target.value,
-                         address: personalInfo.address,
-                         number: personalInfo.number,
-                         email: personalInfo.email,
-        })
-    }
-
-    const handleAddressChange = (e) => {
-        setPersonalInfo({name: personalInfo.name,
-                         address: e.target.value,
-                         number: personalInfo.number,
-                         email: personalInfo.email,
-        })
-    }
-
-    const handleNumberChange = (e) => {
-        setPersonalInfo({name: personalInfo.name,
-                         address: personalInfo.address,
-                         number: e.target.value,
-                         email: personalInfo.email,
-        })
-    }
-
-    const handleEmailChange = (e) => {
-        setPersonalInfo({name: personalInfo.name,
-                         address: personalInfo.address,
-                         number: personalInfo.number,
-                         email: e.target.value,
-        })
-    }
-
     return(
         <div className={styles.personal}>
             <header><div>Personal Information</div></header>
@@ -74,6 +42,38 @@ function Personal({setPersonalInfo, personalInfo}) {
             </div>
         </div>
     )
+
+    function handleNameChange(e) {
+        setPersonalInfo({name: e.target.value,
+                         address: personalInfo.address,
+                         number: personalInfo.number,
+                         email: personalInfo.email,
+        })
+    }
+
+    function handleAddressChange(e) {
+        setPersonalInfo({name: personalInfo.name,
+                         address: e.target.value,
+                         number: personalInfo.number,
+                         email: personalInfo.email,
+        })
+    }
+
+    function handleNumberChange(e) {
+        setPersonalInfo({name: personalInfo.name,
+                         address: personalInfo.address,
+                         number: e.target.value,
+                         email: personalInfo.email,
+        })
+    }
+
+    function handleEmailChange(e) {
+        setPersonalInfo({name: personalInfo.name,
+                         address: personalInfo.address,
+                         number: personalInfo.number,
+                         email: e.target.value,
+        })
+    }
 }
 
 export default Personal
