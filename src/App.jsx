@@ -2,6 +2,7 @@ import { Editor } from "./Editor/Editor.jsx"
 import { Display } from "./Display/Display.jsx"
 import { useState } from "react"
 import { defaultPersonalInfo, defaultSchoolInfo, defaultExperienceInfo, defaultSkillsInfo } from "./defaultInfo.jsx"
+import github from "./assets/github.svg"
 
 function App() {
 
@@ -30,6 +31,12 @@ function App() {
                  schoolInfo = {schoolInfo}
                  experienceInfo = {experienceInfo}
                  skillsInfo = {skillsInfo}/>
+      </div>
+      <div className="footer">
+        <a className="footerContainer" href="https://github.com/kyeung36220" target="_blank"> 
+          <a><img src={github}/></a>
+          <div>Made by Kenneth Yeung</div>
+        </a>
       </div>
     </>
   )
